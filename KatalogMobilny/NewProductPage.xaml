@@ -50,6 +50,5 @@
         <Button Grid.Row="8" Grid.Column="1" Text="Reset" Clicked="Reset_Clicked"/>
 
         <Label Grid.Row="9" Grid.ColumnSpan="2" x:Name="EtykietaWyniku" Text=""/>
-
     </Grid>
 </ContentPage>

@@ -55,11 +55,11 @@ public partial class NewProductPage : ContentPage
         EtykietaWyniku.Text = $"Nazwa ma {iloscZnakow} znaków";
     }
     //TODO: oprogramuj drugi guzik w taki sposób żeby resetował licznik i wyświetlał w etykiecie "Kliknięto 0 razy"
-    private void Reset_Clicked(object sender, EventArgs e)
-    {
-        licznik = 0;
-        EtykietaWyniku.Text = $"Kliknięto {licznik} razy";
-    }
+    //private void Reset_Clicked(object sender, EventArgs e)
+    //{
+    //    licznik = 0;
+    //    EtykietaWyniku.Text = $"Kliknięto {licznik} razy";
+    //}
 
     private void AvailableSwitch_Toggled(object sender, ToggledEventArgs e)
     {
@@ -105,5 +105,13 @@ public partial class NewProductPage : ContentPage
             return;
         }
         EtykietaWartosc.Text = $"Wartość produktu: {cena * ilosc}";
+    }
+    private void Reset_Clicked(object sender, EventArgs e) //nazwa, ilosc, cena, kategoria, dostępność
+    {
+        NazwaEntry.Text = "";
+        CenaEntry.Text = "";
+        IloscEntry.Text = "";
+        KategoriaPicker.SelectedItem = null;
+        AvailableSwitch.IsToggled = false;
     }
 }
