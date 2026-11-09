@@ -81,7 +81,7 @@ public partial class NewProductPage : ContentPage
     private void CenaEntry_TextChanged(object sender, TextChangedEventArgs e)
     {
         Entry s = (Entry)sender;
-        if (!double.TryParse(s.Text, out double wartosc))
+        if (double.TryParse(s.Text, out double wartosc))
         {
             if (wartosc < 0)
             {
@@ -96,14 +96,14 @@ public partial class NewProductPage : ContentPage
 
         if (!double.TryParse(CenaEntry.Text, out double cena))
         {
-            EtykietaWyniku.Text = "Niepoprawna cena!";
+            EtykietaWartosc.Text = $"Niepoprawna cena!";
             return;
         }
-        if(!int.TryParse(IloscEntry.Text, out int ilosc))
+        if (!int.TryParse(IloscEntry.Text, out int ilosc))
         {
-            EtykietaWyniku.Text = "Niepoprawna ilość!";
+            EtykietaWartosc.Text = $"Niepoprawna ilość!";
             return;
         }
-        EtykietaWartosc.Text = $"Wartosc produktu: {cena * ilosc}";
+        EtykietaWartosc.Text = $"Wartość produktu: {cena * ilosc}";
     }
 }
