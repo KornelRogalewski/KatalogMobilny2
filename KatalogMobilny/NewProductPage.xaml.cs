@@ -106,7 +106,7 @@ public partial class NewProductPage : ContentPage
         }
         EtykietaWartosc.Text = $"Wartość produktu: {cena * ilosc}";
     }
-    private void Reset_Clicked(object sender, EventArgs e) //nazwa, ilosc, cena, kategoria, dostępność
+    private void Reset_Clicked(object sender, EventArgs e)
     {
         NazwaEntry.Text = "";
         CenaEntry.Text = "";
